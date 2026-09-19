@@ -54,17 +54,14 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto w-full max-w-4xl px-4 py-32 text-center sm:px-6">
         <p className="font-body text-sm italic tracking-[0.2em] text-mist sm:text-base">
-          a small chronicle, written for
+          the way you look at things
         </p>
-        <h1 className="mt-4 font-display text-5xl font-bold leading-[1.05] text-gold-soft drop-shadow-[0_2px_18px_rgba(0,0,0,0.6)] sm:text-7xl">
-          Happy Birthday
-          <span className="mt-2 block font-display text-6xl italic font-medium text-parchment sm:text-8xl">
-            Mia
-          </span>
+        <h1 className="mt-4 font-display text-6xl italic font-medium leading-[1.05] text-parchment drop-shadow-[0_2px_18px_rgba(0,0,0,0.6)] sm:text-8xl">
+          Mia
         </h1>
         <p className="mx-auto mt-6 max-w-xl font-body text-base leading-relaxed text-parchment/90 sm:text-lg">
-          Another year added to the legend. Somewhere between the realm's trials and its
-          quiet lore, a chronicle has been kept — and tonight, it's yours to explore.
+          You've always had this way of looking at what you want like it's already yours.
+          Here's to another year of chasing it — I believe in you.
         </p>
         <a
           href="#trials"
