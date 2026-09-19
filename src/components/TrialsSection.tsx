@@ -4,12 +4,11 @@ import { motion } from "framer-motion";
 import trialsImg from "../assets/photos/mia-2.jpg";
 import wanderBg from "../assets/photos/mia-5.jpg";
 import { Modal } from "./Modal";
-import { GrimoireQuiz } from "./games/GrimoireQuiz";
-import { LightCandles } from "./games/LightCandles";
-import { RunicMemory } from "./games/RunicMemory";
-import { SealedWord } from "./games/SealedWord";
-import { WhoSaidIt } from "./games/WhoSaidIt";
-import { WanderDiscover } from "./games/WanderDiscover";
+import { EmberCatch } from "./games/EmberCatch";
+import { RuneCast } from "./games/RuneCast";
+import { SlidingCrest } from "./games/SlidingCrest";
+import { SteadyFlame } from "./games/SteadyFlame";
+import { WeaveConstellation } from "./games/WeaveConstellation";
 
 type GameCard = {
   id: string;
@@ -21,40 +20,34 @@ type GameCard = {
 
 const games: GameCard[] = [
   {
-    id: "quiz",
-    title: "The Grimoire Quiz",
-    description: "How well do you truly know Mia? Answer the grimoire's questions.",
-    Component: GrimoireQuiz,
+    id: "ember",
+    title: "Ember Catch",
+    description: "Catch as many rising embers as you can before they fade. Pure reflexes.",
+    Component: EmberCatch,
   },
   {
-    id: "candles",
-    title: "Light the Candles",
-    description: "Six candles, six flames. Light them all to uncover a hidden message.",
-    Component: LightCandles,
+    id: "rune-cast",
+    title: "The Rune Cast",
+    description: "Cast three runes and see what reading they land on. There's no wrong throw.",
+    Component: RuneCast,
   },
   {
-    id: "memory",
-    title: "Runic Memory",
-    description: "Match the ancient runes before your memory fails you.",
-    Component: RunicMemory,
+    id: "crest",
+    title: "The Sliding Crest",
+    description: "Slide the tiles to restore the crest to its whole, unbroken shape.",
+    Component: SlidingCrest,
   },
   {
-    id: "sealed-word",
-    title: "The Sealed Word",
-    description: "Guess the word before the crystal seal shatters completely.",
-    Component: SealedWord,
+    id: "flame",
+    title: "Steady the Flame",
+    description: "Time your stop to light each brazier before the flame moves on.",
+    Component: SteadyFlame,
   },
   {
-    id: "who-said-it",
-    title: "Who Said It?",
-    description: "Match the quote to the friend who actually said it.",
-    Component: WhoSaidIt,
-  },
-  {
-    id: "wander",
-    title: "Wander & Discover",
-    description: "Follow the path and uncover fragments of the realm's lore.",
-    Component: WanderDiscover,
+    id: "constellation",
+    title: "Weave the Constellation",
+    description: "Trace the stars in order and see what shape — and blessing — they form.",
+    Component: WeaveConstellation,
     bgImage: wanderBg,
   },
 ];
@@ -72,7 +65,7 @@ export function TrialsSection() {
               Trials of the Realm
             </h2>
             <p className="mt-4 max-w-xs text-center font-body text-sm text-mist lg:text-left">
-              Six small trials, each a piece of the chronicle. Complete them in any order you
+              Five small trials, each a piece of the chronicle. Complete them in any order you
               like.
             </p>
             <img

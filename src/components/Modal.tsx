@@ -8,9 +8,10 @@ type ModalProps = {
   onClose: () => void;
   title: string;
   children: ReactNode;
+  maxWidthClassName?: string;
 };
 
-export function Modal({ open, onClose, title, children }: ModalProps) {
+export function Modal({ open, onClose, title, children, maxWidthClassName = "max-w-2xl" }: ModalProps) {
   const closeButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -52,7 +53,7 @@ export function Modal({ open, onClose, title, children }: ModalProps) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 16, scale: 0.98 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="relative z-10 max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-lg border border-gold/30 bg-gradient-to-b from-panel to-panel-2 p-5 shadow-2xl shadow-black/60 sm:p-8"
+            className={`relative z-10 max-h-[90vh] w-full overflow-y-auto rounded-lg border border-gold/30 bg-gradient-to-b from-panel to-panel-2 p-5 shadow-2xl shadow-black/60 sm:p-8 ${maxWidthClassName}`}
           >
             <div className="mb-4 flex items-start justify-between gap-4">
               <h3 id="modal-title" className="font-display text-2xl font-semibold text-gold-soft sm:text-3xl">

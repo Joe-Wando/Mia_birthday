@@ -5,6 +5,7 @@ import miaEmblem from "../assets/photos/mia-4.jpg";
 const links = [
   { id: "home", label: "Home" },
   { id: "trials", label: "Trials" },
+  { id: "grimoire", label: "Grimoire" },
   { id: "lorekeeper", label: "Lorekeeper" },
 ];
 
