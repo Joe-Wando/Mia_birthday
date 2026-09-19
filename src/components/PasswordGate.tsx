@@ -6,7 +6,7 @@ import { Sigil } from "./icons/Sigil";
 // Client-side only — good enough to keep casual visitors out of a private
 // birthday link, but not a real secret (it ships in the JS bundle).
 const PASSWORD = "miaforjoe";
-const STORAGE_KEY = "mia-chronicle-unlocked";
+export const STORAGE_KEY = "mia-chronicle-unlocked";
 
 export function PasswordGate({ children }: { children: ReactNode }) {
   const [checked, setChecked] = useState(false);
