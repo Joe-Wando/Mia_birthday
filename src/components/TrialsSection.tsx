@@ -85,7 +85,7 @@ export function TrialsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="group relative min-h-[160px] overflow-hidden rounded-md border border-gold/20 bg-gradient-to-br from-panel to-panel-2 p-5 text-left shadow-lg shadow-black/30 transition-colors hover:border-gold-soft/60"
+                className="group relative min-h-[160px] overflow-hidden rounded-md border border-gold/20 bg-gradient-to-br from-panel to-panel-2 text-left shadow-lg shadow-black/30 transition-colors hover:border-gold-soft/60"
               >
                 {game.bgImage ? (
                   <>
@@ -98,7 +98,7 @@ export function TrialsSection() {
                     <div className="absolute inset-0 bg-gradient-to-t from-void/90 via-void/50 to-void/20" />
                   </>
                 ) : null}
-                <div className="relative z-10 flex h-full flex-col justify-end">
+                <div className="absolute inset-0 z-10 flex flex-col justify-end p-5">
                   <h3 className="font-display text-xl font-semibold text-gold-soft sm:text-2xl">
                     {game.title}
                   </h3>
