@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@theme {
+  --color-void: #0b0a12;
+  --color-panel: #161220;
+  --color-panel-2: #1d1729;
+  --color-gold: #c9a227;
+  --color-gold-soft: #e2c261;
+  --color-wine: #6b1e2b;
+  --color-parchment: #efe3c8;
+  --color-mist: #a29fc0;
+  --color-glow: #3d7a6e;
+  --color-glow-soft: #6fb3a3;
+
+  --font-display: "Cormorant Garamond", "Georgia", serif;
+  --font-body: "Crimson Pro", "Georgia", serif;
+
+  --animate-ember-rise: ember-rise 9s linear infinite;
+  --animate-flame-flicker: flame-flicker 2.2s ease-in-out infinite;
+  --animate-glow-pulse: glow-pulse 1.6s ease-in-out infinite;
+  --animate-card-shake: card-shake 0.5s ease-in-out;
+}
+
+@keyframes ember-rise {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.6);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-110vh) translateX(var(--drift, 20px)) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes flame-flicker {
+  0%,
+  100% {
+    transform: scaleY(1) scaleX(1) rotate(-1deg);
+    opacity: 1;
+  }
+  25% {
+    transform: scaleY(1.08) scaleX(0.96) rotate(1.5deg);
+    opacity: 0.92;
+  }
+  50% {
+    transform: scaleY(0.94) scaleX(1.04) rotate(-2deg);
+    opacity: 1;
+  }
+  75% {
+    transform: scaleY(1.05) scaleX(0.98) rotate(1deg);
+    opacity: 0.95;
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0px 0px rgba(111, 179, 163, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 22px 6px rgba(111, 179, 163, 0.55);
+  }
+}
+
+@keyframes card-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-6px);
+  }
+  40% {
+    transform: translateX(6px);
+  }
+  60% {
+    transform: translateX(-4px);
+  }
+  80% {
+    transform: translateX(4px);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: var(--color-void);
+  color: var(--color-parchment);
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+}
+
+::selection {
+  background-color: var(--color-gold);
+  color: var(--color-void);
+}
+
+/* visible focus ring for keyboard users, on the dark theme */
+:focus-visible {
+  outline: 2px solid var(--color-gold-soft);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
