@@ -71,7 +71,7 @@ export function TrialsSection() {
             <img
               src={trialsImg}
               alt="Mia seated on a dark throne, a black wolf resting beside her"
-              className="mt-8 hidden aspect-[3/4] w-full max-w-[280px] rounded-md border border-gold/20 object-cover shadow-xl shadow-black/40 lg:block"
+              className="mt-8 aspect-[3/4] w-full max-w-[280px] rounded-md border border-gold/20 object-cover shadow-xl shadow-black/40"
             />
           </div>
 
